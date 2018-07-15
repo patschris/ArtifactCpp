@@ -3,9 +3,18 @@
 
 class Painting: public Masterpiece {
 	private:
+		/* 
+		 * Painting's length
+		 */
 		int length;
+		/* 
+		 * Painting's width
+		 */
 		int width;
-		Technique technique; //oil, aquarelle, tempera
+		/* 
+		 * Painting's technique (Oil, Aquarelle, Tempera)
+		 */
+		Technique technique;
 	public:
 		Painting(int, char *, int, Movement, Condition, int, int, Technique);
 		~Painting();

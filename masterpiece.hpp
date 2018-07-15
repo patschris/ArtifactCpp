@@ -3,8 +3,14 @@
 
 class Masterpiece: public Artifact {
 	private:
-		Movement movement; // impressionism, expressionism, naturalism
-		Condition condition; // bad, good, excellent
+		/* 
+		 * Masterpiece's movement (Impressionism, Expressionism, Naturalism)
+		 */
+		Movement movement;
+		/* 
+		 * Masterpiece's movement (Bad, Good, Excellent)
+		 */
+		Condition condition;
 	public:
 		Masterpiece(int, char *, int, Movement, Condition);
 		virtual ~Masterpiece();

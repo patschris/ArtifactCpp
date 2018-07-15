@@ -1,10 +1,9 @@
 CC		= g++
-CFLAGS	= -g3 -Wall
+CFLAGS	= -g -Wall
 EXEC 	= artifact
 OBJS 	= artifact.o artifactHolder.o main.o masterpiece.o painting.o prints.o sculpture.o validation.o
 SRCS 	= artifact.cpp artifactHolder.cpp main.cpp masterpiece.cpp painting.cpp prints.cpp sculpture.cpp validation.cpp
 HDS		= artifact.hpp artifactHolder.hpp enumerations.hpp masterpiece.hpp painting.hpp prints.hpp sculpture.hpp validation.hpp
-
 
 .PHONY : all
 all: $(EXEC)
@@ -39,3 +38,7 @@ validation.o: validation.cpp
 .PHONY: clean
 clean:
 	rm -f $(OBJS) $(EXEC)
+
+.PHONY: check
+check:
+	valgrind --leak-check=full ./$(EXEC) 5 1 1

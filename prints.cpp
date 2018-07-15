@@ -3,6 +3,10 @@
 
 using namespace std;
 
+/*
+ * Printing enumeration types
+ */
+
 void printMovement (Movement m){
 	if (m == 0)
 		cout << "Impressionism";

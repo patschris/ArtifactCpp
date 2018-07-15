@@ -3,8 +3,14 @@
 
 class Sculpture: public Masterpiece {
 	private:
+		/* 
+		 * Sculpture's volume
+		 */
 		int volume;
-		Material material; //iron, stone, wood
+		/* 
+		 * Sculpture's material (Iron, Stone, Wood)
+		 */
+		Material material;
 	public:
 		Sculpture(int, char *, int, Movement, Condition, int, Material);
 		~Sculpture();
